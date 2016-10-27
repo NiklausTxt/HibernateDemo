@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"	"http://hibernate.sourceforge.net/hibernate-configuration-2.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name = "show_sql">true</property>
+		
+		<!-- 配置JDBC Driver -->
+		<property name = "connection.driver_class">com.mysql.jdbc.Driver</property>
+		
+		<!-- 配置数据库连接URL -->
+		<property name = "connection.url">jdbc:mysql://localhost:3306/qingke1027?useSSL=false</property>
+		
+		<!-- 配置数据库用户名 -->
+		<property name = "connection.username">root</property>
+		
+		<!-- 配置数据库密码 -->
+		<property name = "connection.password">123456</property>
+		
+		<!-- 配置Hibernate使用的数据库方言 -->
+		<property name = "dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<!-- class = "com.hibernate.entity.Student" class = "com.hibernate.entity.Apartment" resource="student.hbm.xml" -->
+		<mapping  class = "com.hibernate.bean.Student" />
+		<mapping  class = "com.hibernate.bean.Apartment" />
+		<mapping  class = "com.hibernate.bean.AcademyYear" />
+		<mapping  class = "com.hibernate.bean.Accommodation" />
+	</session-factory>
+</hibernate-configuration>
